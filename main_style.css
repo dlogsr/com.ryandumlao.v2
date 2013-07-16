@@ -6,11 +6,34 @@ html{
 
 body{
 	font-family: 'Muli', sans-serif;
+	font-size:1.1em;
 	color: #fff;
 	padding:0;
 	margin:0;
 	background-image: url(seamlesstexture2_1200.jpg);
 }
+
+a:link{
+	color:#FFF;
+}
+
+/* section formatting CSS code */
+section{
+	background-color:rgba(0,0,0,0.3);
+	border: 2px solid black;
+	margin: 120px auto 100px;
+	padding:10px;
+	border-radius:25px;
+	z-index:1;
+}
+
+#blankContent{
+	position:relative;
+	height:800px;
+	top:0;
+	bottom:0;
+}
+
 
 /*main bar CSS code */
 
@@ -19,6 +42,7 @@ body{
 	height:100%;
 	margin-top:10px;
 	text-align:center;
+	z-index:-1;
 }
 
 #content{
@@ -26,17 +50,19 @@ body{
 	position:relative;
 	margin:auto;
 	text-align:left;
+	z-index:1;
 }
 
 #mainBar{
 	width:800px;
-	margin:auto auto;
 	bottom: 200px;
 	left:50%;
 	margin-left:-400px;
+	z-index:10;
 }
 
 #navBar{
+	position:relative;
 	background-color:#000;
 	color:white;
 	line-height:10px;
@@ -46,13 +72,26 @@ body{
 }
 
 
-nav li{
-	display:inline-block;
-	padding-left:30px;
+/* navi related CSS code */
+nav{
+	height:40px;
 }
+
+nav li{
+	margin-top:0;
+	top:0;
+	display:inline;
+	position:absolute;
+	padding:16px;
+}
+
 
 .navCat{
 	cursor:pointer;
+	position:relative;
+	height:40px;
+	margin:auto;
+	text-align:center;
 }
 
 
@@ -75,8 +114,6 @@ nav li{
 	height: 150px;
 	border-bottom-right-radius: 0px;
 }*/
-<<<<<<< HEAD
-=======
 
 .miniMainBar{
 	bottom:0;
@@ -84,7 +121,7 @@ nav li{
 	left:0;
 	margin-left:0;
 }
->>>>>>> smaller mainbar
+/* smaller mainbar*/
 
 .smooshBar#mainBar .smooshBar#navBar{
 	position:fixed;
@@ -133,3 +170,65 @@ nav li{
 .hidden{
 	display:none;
 }
+
+
+/*popup tab CSS*/
+
+.popUp{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	margin:auto;
+	background-color:#000;
+	bottom:0;
+	z-index:-1;
+	border-radius:15px;
+	text-align:center;
+}
+
+#aboutPopUpBG{
+	background: url(icons/about.png) no-repeat center top;
+	margin-top:4px;
+	width:100%;
+	height:67px;
+	z-index:4;
+}
+
+#resumePopUpBG{
+	background: url(icons/resume.png) no-repeat center top;
+	margin-top:4px;
+	width:100%;
+	height:67px;
+	z-index:4;
+}
+
+#portfolioPopUpBG{
+	background: url(icons/portfolio.png) no-repeat center top;
+	margin-top:4px;
+	width:100%;
+	height:67px;
+	z-index:4;
+}
+
+#contactPopUpBG{
+	background: url(icons/contact.png) no-repeat center top;
+	margin-top:4px;
+	width:100%;
+	height:67px;
+	z-index:4;
+}
+
+/*page specific CSS*/
+
+#disclaimer{
+	color:#888;
+}
+
+#about figure{
+	float:right;
+	border: 2px solid black;
+	border-radius:;
+}
+
+/*resume*/

@@ -3,7 +3,9 @@
 <head>
 <link style="text/css" rel="stylesheet" href="main_style.css" />
 <link href='http://fonts.googleapis.com/css?family=Dosis|Gudea:400,400italic|Muli:400,400italic' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' type='text/css' href='jquery-ui-1.10.3.custom/css/dumlao-green/jquery-ui-1.10.3.custom.min.css'/>
 <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ryandumlao</title>
@@ -11,30 +13,87 @@
 
 <body>
 <div id="page">
-ALL OF THE THINGS
-<p></p>
+    
     <article id="content" class="hidden">
-      <section id="about"><h1>About</h1>
+      <section id="about">
+        <figure>
+          <img src="headshot2.jpg" />
+        </figure>
+        <h1>About</h1>
         <p>
-      	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus dolor, posuere quis congue ac, lacinia id velit. Nam a commodo arcu. Suspendisse tempor consequat viverra. Aliquam non arcu sit amet mi aliquet aliquam. Integer volutpat vel nunc vitae cursus. Praesent dapibus hendrerit erat. Nullam ac diam eget magna porta molestie. Nulla lacinia vulputate lobortis. Duis laoreet pharetra purus, non facilisis erat lobortis eget. Vestibulum vitae euismod risus, nec varius purus. Curabitur faucibus pulvinar ante vel pellentesque. Integer id dui tellus. Pellentesque hendrerit suscipit tortor, ac porttitor ante faucibus at. Donec in nisl quis orci imperdiet luctus at sed turpis. Nam sit amet magna semper, sagittis tortor id, volutpat nibh.
+          A Bay Area native currently in Los Angeles, I have undertaken a variety of experiences throughout my life. From early 2000 web development, to electrical engineering research and work, and personal interests, I am a well-rounded and experienced professional.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus dolor, posuere quis congue ac, lacinia id velit. Nam a commodo arcu. Suspendisse tempor consequat viverra. Aliquam non arcu sit amet mi aliquet aliquam. Integer volutpat vel nunc vitae cursus. Praesent dapibus hendrerit erat. Nullam ac diam eget magna porta molestie. Nulla lacinia vulputate lobortis. Duis laoreet pharetra purus, non facilisis erat lobortis eget. Vestibulum vitae euismod risus, nec varius purus. Curabitur faucibus pulvinar ante vel pellentesque. Integer id dui tellus. Pellentesque hendrerit suscipit tortor, ac porttitor ante faucibus at. Donec in nisl quis orci imperdiet luctus at sed turpis. Nam sit amet magna semper, sagittis tortor id, volutpat nibh.
+          I hold an MS from UCLA and a BS from UCSD in Electrical Engineering, with emphasis on Solid State Electronics and Photonics. My interests include web technology, web design, nanotechnology, semiconductors, photonics, and the ever-growing tech industry, among many others. I also enjoy photography and compilation video editing. I have strived to maintain a diverse working experience, including radiation detection, FPGA programming, hardware integration and testing, space-grade optical engineering, corporate finance, and commercial supplier quality control. On the side, I have experience in web design and programming.
+        </p>
+        <p id="disclaimer">
+          This site is perpetually changing. All elements of this site are self-written using HTML5, CSS and jQuery/JavaScript.
         </p>
       </section>
-      <section id="resume"><h1>Resume</h1>
-        <p>
-      	  Integer convallis et neque nec placerat. Nunc et luctus eros. Morbi non adipiscing urna, eu convallis tortor. Aenean sed elit mollis eros tempus blandit. Aenean varius dapibus arcu ut volutpat. Aenean pharetra fringilla neque at congue. Vestibulum id tortor non mi ultricies elementum accumsan vel nulla. Aenean ut urna ipsum. Etiam a leo non eros suscipit vehicula sit amet in neque.
-        </p>
-        <p>
-     	   Maecenas vitae eleifend metus. Sed malesuada ante dui, vulputate sagittis purus bibendum eget. Curabitur augue mauris, bibendum ac augue porta, vulputate faucibus velit. Proin cursus sem sit amet fermentum tempor. Fusce volutpat leo risus, vel pellentesque arcu venenatis et. Praesent vel risus convallis, interdum magna a, tempor nunc. Aliquam hendrerit eleifend eros eget commodo. Mauris non suscipit sapien, quis suscipit ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent dictum massa ac urna pharetra, in blandit ante dapibus. Nulla interdum dictum risus, at cursus nulla.
-        </p>
-        <p>
-          Integer convallis et neque nec placerat. Nunc et luctus eros. Morbi non adipiscing urna, eu convallis tortor. Aenean sed elit mollis eros tempus blandit. Aenean varius dapibus arcu ut volutpat. Aenean pharetra fringilla neque at congue. Vestibulum id tortor non mi ultricies elementum accumsan vel nulla. Aenean ut urna ipsum. Etiam a leo non eros suscipit vehicula sit amet in neque.
-        </p>
-        <p>
-         Maecenas vitae eleifend metus. Sed malesuada ante dui, vulputate sagittis purus bibendum eget. Curabitur augue mauris, bibendum ac augue porta, vulputate faucibus velit. Proin cursus sem sit amet fermentum tempor. Fusce volutpat leo risus, vel pellentesque arcu venenatis et. Praesent vel risus convallis, interdum magna a, tempor nunc. Aliquam hendrerit eleifend eros eget commodo. Mauris non suscipit sapien, quis suscipit ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent dictum massa ac urna pharetra, in blandit ante dapibus. Nulla interdum dictum risus, at cursus nulla.
-        </p>
+      <section id="resume">
+           <hgroup>
+            <h1>Resume</h1>
+              <h4>For detailed resume, please <a href="rdumlao_resume.pdf" target="_blank">click here</a></h4>
+           </hgroup>
+           <div id="resumefull">
+            <h3>Education</h3>
+              <div class="resumecat">
+                  <ul>
+                  <li><strong>University of California, Los Angeles (2008-2010)</strong></li>
+                      <ul>
+                          <li>Master of Science, Electrical Engineering - Solid State and Photonics</li>
+                          <li>Research: Model for Calculating the Surface State Density and Resistivity in n-doped GaAs nanopillars</li>
+                      </ul><br />
+
+                  <li><strong>University of California, San Diego (2003-2007)</strong></li>
+                      <ul>
+                          <li>Bachelor of Science, Electrical Engineering - Photonics</li>
+                          <li>Minor, Japanese Studies</li>
+                      </ul>
+                  </ul>
+                  <br /></div>
+               <h3>Work Experience</h3>
+           <div class="resumecat">
+                <ul>
+                  <li><strong>Electrical Engineer II<br /></strong>
+              <em>Raytheon Space and Airborne Systems (2010-Present)</em></li>
+                    <ul>
+                        <li>Engineering Rotation Program</li>
+                          <ul>
+                            <li>Optical Engineer - VIIRS</li>
+                              <li>Material Quality Manager - Supplier Quality</li>
+                              <li>Financial Analyst - Engineering Finance</li>
+                          </ul>
+                          <li>Radar Special Test Equipment</li>
+                          <ul>
+                            <li>FPGA VXI Board Design Group, F/A-18 Radar STE</li>
+                              <li>Schematic & Drawing Support, Japan F-15 STE</li>
+                          </ul>
+                      </ul><br />
+                   <li><strong>Teaching Assistant</strong><br />
+              <em>University of California, Los Angeles (2009)</em></li>
+                    <ul>
+                           <li>Basic Chemistry TA, Department of Chemistry and Biochemistry</li>
+                      </ul><br />
+
+                   <li><strong>Jr. Electrical Engineer</strong><br />
+              <em>Space Micro, Inc. (2007-2008)</em></li>
+                      <ul>
+                        <li>Primary Engineer, Low-dose Passive Radiation Detection</li>
+                      </ul>
+                    </ul><br />
+             </div>
+                 <h3>Skills</h3>
+             <div class="resumecat">
+                    <ul>
+                      <li><strong>Programming:</strong> C/C++, VHDL, Java, Android SDK, HTML5, CSS, JavaScript, jQuery (Basic to Intermediate)</li>
+                      <li><strong>Software:</strong> Mentor Graphics Design Architect, LabVIEW, Xilinx ISE, Matlab, ORCAD PSpice, Punch ViaCAD, Microsoft Office, Adobe Photoshop, Adobe Premiere, Adobe Dreamweaver, SAP-based environments, Linux Operating Systems</li>
+                      <li><strong>Hardware:</strong> Oscilloscopes, Logic Analyzers, Military-spec assemblies and control panels, FPGA Interfaces (JTAG),  Interferometers, Lasers, Laser Trackers, Optical Systems, Class 1000+ Cleanrooms</li>
+                      <li><strong>Certifications:</strong> Six Sigma Specialist, Earned Value Management System (EVMS) Level 1, NI LabVIEW Level 1 Ceritication</li>
+                </ul>
+                  </div>
+                </div>
+              <p>
       </section>
       <section id="portfolio"><h1>Portfolio</h1>
         <p>
@@ -64,14 +123,40 @@ ALL OF THE THINGS
 
     </article>
 </div>
+
+<!-- this is the nav bar code -->
 <div id="mainBar" class="fullBar absolutePos">
     <div id="navBar">
-        <nav id="navigation">
+        <nav>
             <ul>
-                <li id="aboutTab" class="navCat">about</li>
-                <li id="resumeTab" class="navCat">resume</li>
-                <li id="portfolioTab" class="navCat">portfolio</li>
-                <li id="contactTab" class="navCat">contact</li>
+                <li id="aboutTab" class="navCat">
+                  <div id="aboutPopUp" class="popUp">
+                    <div id="aboutPopUpBG">
+                    </div>
+                  </div>
+                  about
+                </li>
+                <li id="resumeTab" class="navCat">
+                  <div id="resumePopUp" class="popUp">
+                    <div id="resumePopUpBG">
+                    </div>
+                  </div>
+                  resume
+                </li>
+                <li id="portfolioTab" class="navCat">
+                  <div id="portfolioPopUp" class="popUp">
+                    <div id="portfolioPopUpBG">
+                    </div>
+                  </div>
+                  portfolio
+                </li>
+                <li id="contactTab" class="navCat">
+                  <div id="contactPopUp" class="popUp">
+                    <div id="contactPopUpBG">
+                    </div>
+                  </div>
+                  contact
+                </li>
              </ul>
          </nav>
             

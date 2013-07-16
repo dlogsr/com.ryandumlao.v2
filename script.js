@@ -3,6 +3,7 @@ $(document).ready(function(){
 		$mainBar = $('#mainBar'),
 		$nameBar = $('#nameBar'),
 		$navBar = $('#navBar');
+		$blankContent =$('#blankContent');
 	
 	var $nameBarPrimary = $('#nameBarPrimary'),
 		$nameBarH1 = $('#nameBar h1'),
@@ -13,7 +14,23 @@ $(document).ready(function(){
 	var docked = false;
 	console.log(docked);
 
-	
+	function tabDesignate(tab){
+		var currTab = tab.attr('id');
+		$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
+	};
+
+	$navCat.hover(
+		function(){
+			//var currTab = $(this).attr('id');
+			//$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
+			tabDesignate($(this));
+			$currTab.stop().animate({top:'-53px'},100);
+		},
+		function(){
+			tabDesignate($(this));
+			$currTab.stop().animate({top:'0px'},150);//,function(){$currTab.addClass('hidden')});
+		});
+
 	$navCat.click(function() {
 		if(docked == false){
 			console.log('clicked');
@@ -27,17 +44,22 @@ $(document).ready(function(){
 			$navBar.add($nameBar).animate({'height':'50px',
 										   'border-bottom-right-radius':0,
 										   'border-top-left-radius':0,},1000);
-			$nameBarPrimary.animate({'top':'-40px'},1000);
+			$nameBarPrimary.animate({'top':'-50px'},1000);
 			$mainBar.removeClass('absolutePos').addClass('fixedPos');
+			//$blankContent.animate({top:'-1000px'},1000,function(){$blankContent.addClass('hidden')});
 			$content.fadeIn(1000);
 			$content.removeClass('hidden');
 			docked = true;
 		}
 		else{
 		};
-		console.log(this.attr('id'));
-		var offset = $navCat.offset().top - 20;
-		$('html,body').stop().animate({scrollTop : offset},1000);
+
+		//jump to sections per navCat clicked
+		var currSection = $(this).attr('id');
+		currSection = '#'+currSection.slice(0,currSection.length-3);
+		console.log(currSection);
+		var offset = $(currSection).offset().top - 20;
+		$('html,body').stop().animate({scrollTop : offset},500);
 
 
 	});
@@ -47,3 +69,7 @@ $(document).ready(function(){
 		//$mainBar.switchClass("fullBar","absolutePos",1000);
 	});
 });// JavaScript Document
+
+$(document).ready(function(){
+	$('#resumefull').accordion({heightStyle:"content",collapsible:true});
+});
