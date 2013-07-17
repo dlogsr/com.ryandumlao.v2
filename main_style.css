@@ -13,8 +13,19 @@ body{
 	background-image: url(seamlesstexture2_1200.jpg);
 }
 
-a:link{
+h1{
+	font-size:1.5em;
+}
+
+a:link, a:visited{
 	color:#FFF;
+	padding:2px;
+}
+
+a:hover{
+	background-color:rgba(204, 255, 17, 0.6);
+	border-radius:5px;
+	padding:2px;
 }
 
 /* section formatting CSS code */
@@ -225,10 +236,52 @@ nav li{
 	color:#888;
 }
 
-#about figure{
+figure img{
 	float:right;
 	border: 2px solid black;
-	border-radius:;
+	border-radius:15px;
 }
 
 /*resume*/
+
+/*portfolio*/
+.webWindow{
+	position:relative;
+	display:inline-block;
+	border:3px solid black;
+	border-radius:10px;
+	padding:0;
+	margin: auto -1px auto;
+	width:250px;
+	height:204px;
+}
+
+#shibataFloral{
+	background: url(portfolio/webdesign_1.jpg);
+}
+
+#ryanDumlaoV1{
+	background: url(portfolio/webdesign_2.jpg);
+}
+
+#ucsdNSU{
+	background:url(portfolio/webdesign_3.jpg);
+}
+
+/*contact*/
+
+#contactButtonWrapper{
+	position:relative;
+	margin: auto;
+	text-align:right;
+}
+
+#contactButtonWrapper li{
+	display:inline-block;
+	padding:10px;
+}
+
+#contactButtonWrapper a:hover{
+	text-decoration:none;
+	background-color:rgba(0,0,0,0);
+}

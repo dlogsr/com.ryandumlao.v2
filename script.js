@@ -17,17 +17,18 @@ $(document).ready(function(){
 	function tabDesignate(tab){
 		var currTab = tab.attr('id');
 		$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
+		return $currTab;
 	};
 
 	$navCat.hover(
 		function(){
 			//var currTab = $(this).attr('id');
 			//$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
-			tabDesignate($(this));
+			var $currtab = tabDesignate($(this));
 			$currTab.stop().animate({top:'-53px'},100);
 		},
 		function(){
-			tabDesignate($(this));
+			var $currtab = tabDesignate($(this));
 			$currTab.stop().animate({top:'0px'},150);//,function(){$currTab.addClass('hidden')});
 		});
 
