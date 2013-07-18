@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link style="text/css" rel="stylesheet" href="main_style.css" />
-<link href='http://fonts.googleapis.com/css?family=Dosis|Gudea:400,400italic|Muli:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dosis|Gudea:400,400italic|Muli:300,400' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' type='text/css' href='jquery-ui-1.10.3.custom/css/dumlao-green/jquery-ui-1.10.3.custom.min.css'/>
 <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
-<!--<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>-->
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ryandumlao</title>
@@ -15,6 +15,10 @@
 <div id="page">
     
     <article id="content" class="hidden">
+      <div class="contentIcon">
+        <div class="popUpBG aboutPopUpBG">
+        </div>
+      </div>
       <section id="about">
         <figure>
           <img src="headshot2.jpg" />
@@ -30,10 +34,14 @@
           This site is perpetually changing. All elements of this site are self-written using HTML5, CSS and jQuery/JavaScript.
         </p>
       </section>
+      <div class="contentIcon">
+        <div class="popUpBG resumePopUpBG">
+        </div>
+      </div>
       <section id="resume">
            <hgroup>
             <h1>Resume</h1>
-              <h4>For detailed resume, please <a href="rdumlao_resume.pdf" target="_blank">click here</a></h4>
+              For detailed resume, please <a href="rdumlao_resume.pdf" target="_blank"><strong>click here</strong></a><p></p>
            </hgroup>
            <div id="resumefull">
             <h3>Education</h3>
@@ -56,7 +64,7 @@
            <div class="resumecat">
                 <ul>
                   <li><strong>Electrical Engineer II<br /></strong>
-              <em>Raytheon Space and Airborne Systems (2010-Present)</em></li>
+                    <em>Raytheon Space and Airborne Systems (2010-Present)</em></li>
                     <ul>
                         <li>Engineering Rotation Program</li>
                           <ul>
@@ -70,14 +78,17 @@
                               <li>Schematic & Drawing Support, Japan F-15 STE</li>
                           </ul>
                       </ul><br />
+                   <li><strong>Freelance Webdesign</strong><br />
+                     <em>(1999-2004, 2013-Present)</em>
+                   </li><br />
                    <li><strong>Teaching Assistant</strong><br />
-              <em>University of California, Los Angeles (2009)</em></li>
-                    <ul>
+                    <em>University of California, Los Angeles (2009)</em></li>
+                      <ul>
                            <li>Basic Chemistry TA, Department of Chemistry and Biochemistry</li>
                       </ul><br />
 
                    <li><strong>Jr. Electrical Engineer</strong><br />
-              <em>Space Micro, Inc. (2007-2008)</em></li>
+                    <em>Space Micro, Inc. (2007-2008)</em></li>
                       <ul>
                         <li>Primary Engineer, Low-dose Passive Radiation Detection</li>
                       </ul>
@@ -86,7 +97,7 @@
                  <h3>Skills</h3>
              <div class="resumecat">
                     <ul>
-                      <li><strong>Programming:</strong> C/C++, VHDL, Java, Android SDK, HTML5, CSS, JavaScript, jQuery (Basic to Intermediate)</li>
+                      <li><strong>Programming:</strong> C/C++, VHDL, Java, Android SDK, HTML5, CSS, JavaScript, jQuery</li>
                       <li><strong>Software:</strong> Mentor Graphics Design Architect, LabVIEW, Xilinx ISE, Matlab, ORCAD PSpice, Punch ViaCAD, Microsoft Office, Adobe Photoshop, Adobe Premiere, Adobe Dreamweaver, SAP-based environments, Linux Operating Systems</li>
                       <li><strong>Hardware:</strong> Oscilloscopes, Logic Analyzers, Military-spec assemblies and control panels, FPGA Interfaces (JTAG),  Interferometers, Lasers, Laser Trackers, Optical Systems, Class 1000+ Cleanrooms</li>
                       <li><strong>Certifications:</strong> Six Sigma Specialist, Earned Value Management System (EVMS) Level 1, NI LabVIEW Level 1 Ceritication</li>
@@ -95,10 +106,12 @@
                 </div>
               <p>
       </section>
+
+      <div class="contentIcon">
+        <div class="popUpBG portfolioPopUpBG">
+        </div>
+      </div>
       <section id="portfolio">
-         <figure>
-          <img src="portfolio.jpg" />
-         </figure>
         <h1>Portfolio</h1>
         <h3>Technical</h3>
          <ul>
@@ -118,7 +131,13 @@
         <h3>Webdesign</h3>
         <div id="webPortfolioWrapper">
           <div id="shibataFloral" class="webWindow">
-
+            <div class="webWindowSubText hidden">
+              <p>
+                Shibata Floral Company<br/>
+                www.shibatafloral.com<br/>
+                Status: Constructing
+              </p>
+            </div>
           </div>
           <div id="ryanDumlaoV1" class="webWindow">
           </div>
@@ -126,6 +145,11 @@
           </div>
         </div>
       </section>
+
+      <div class="contentIcon">
+        <div class="popUpBG contactPopUpBG">
+        </div>
+      </div>
       <section id="contact"><h1>Contact</h1>
        <ul>
         <li>e-mail: <a href="mailto:ryan.dumlao@gmail.com">ryan.dumlao@gmail.com</a></li>
@@ -135,10 +159,11 @@
        <p>
        <div id="contactButtonWrapper">
         <ul>
-          <li><a href="http://www.linkedin.com/pub/ryan-dumlao/19/442/876/" target="_blank"><img src="contact_linkedin.png" /></a></li>
-          <li><a href="https://angel.co/ryan-dumlao" target="_blank"><img src="contact_angellist.png" /></a></li>
-          <li><a href="http://www.flickr.com/photos/dlogsr/sets/72157633423617771/" target="_blank"><img src="contact_flickr.png" /></a></li>
-          <li><a href="http://www.youtube.com/dlogsr" target="_blank"><img src="contact_youtube.png" /></a></li>
+          <li><a href="http://www.linkedin.com/pub/ryan-dumlao/19/442/876/" target="_blank"><img src="contact_linkedin.png" title="LinkedIn" /></a></li>
+          <li><a href="https://angel.co/ryan-dumlao" target="_blank"><img src="contact_angellist.png" title="AngelList"/></a></li>
+          <li><a href="http://dlogsr.yelp.com/" target="_blank"><img src="contact_yelp.png" title="Yelp"/></a></li>
+          <li><a href="http://www.flickr.com/photos/dlogsr/sets/72157633423617771/" target="_blank"><img src="contact_flickr.png" title="flickr"/></a></li>
+          <li><a href="http://www.youtube.com/dlogsr" target="_blank"><img src="contact_youtube.png" title="YouTube"/></a></li>
        </div>
       </section>
     <p></p>
@@ -151,28 +176,28 @@
             <ul>
                 <li id="aboutTab" class="navCat">
                   <div id="aboutPopUp" class="popUp">
-                    <div id="aboutPopUpBG">
+                    <div class="popUpBG aboutPopUpBG">
                     </div>
                   </div>
                   about
                 </li>
                 <li id="resumeTab" class="navCat">
                   <div id="resumePopUp" class="popUp">
-                    <div id="resumePopUpBG">
+                    <div class="popUpBG resumePopUpBG">
                     </div>
                   </div>
                   resume
                 </li>
                 <li id="portfolioTab" class="navCat">
                   <div id="portfolioPopUp" class="popUp">
-                    <div id="portfolioPopUpBG">
+                    <div class="popUpBG portfolioPopUpBG">
                     </div>
                   </div>
                   portfolio
                 </li>
                 <li id="contactTab" class="navCat">
                   <div id="contactPopUp" class="popUp">
-                    <div id="contactPopUpBG">
+                    <div class="popUpBG contactPopUpBG">
                     </div>
                   </div>
                   contact
@@ -190,6 +215,6 @@
         </div>
     </div>
 </div>
-
+</article>
 </body>
 </html>

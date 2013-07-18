@@ -1,9 +1,31 @@
+//var windowHeight = $(window).height();
+
+function tabDesignate(tab){
+	var currTab = tab.attr('id');
+	$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
+	return $currTab;
+};
+
+function popUp(tab,dist){
+	var $currTab = tab;
+	dist = dist*(-1);
+	$currTab.stop().animate({top:dist},100);
+};
+
+function popDown(tab){
+	var $currTab = tab;
+	$currTab.stop().animate({top:'0px'},150);
+};
+
 $(document).ready(function(){
 	var $navCat = $('.navCat'),
 		$mainBar = $('#mainBar'),
 		$nameBar = $('#nameBar'),
-		$navBar = $('#navBar');
-		$blankContent =$('#blankContent');
+		$navBar = $('#navBar'),
+		$popUpClass = $('.popUp'),
+		$blankContent =$('#blankContent'),
+		$webWindow = $('.webWindow'),
+		$webWindowSubText = $('.webWindow > .webWindowSubText');
 	
 	var $nameBarPrimary = $('#nameBarPrimary'),
 		$nameBarH1 = $('#nameBar h1'),
@@ -14,22 +36,20 @@ $(document).ready(function(){
 	var docked = false;
 	console.log(docked);
 
-	function tabDesignate(tab){
-		var currTab = tab.attr('id');
-		$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
-		return $currTab;
-	};
+	/*$webWindow.hover(
+		function(){
+			popUp($webWindowSubText.fadeIn(100),-50);
+		},
+		function(){
+			popDown($webWindowSubText);
+		});*/
 
 	$navCat.hover(
 		function(){
-			//var currTab = $(this).attr('id');
-			//$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
-			var $currtab = tabDesignate($(this));
-			$currTab.stop().animate({top:'-53px'},100);
+			popUp(tabDesignate($(this)),53);
 		},
 		function(){
-			var $currtab = tabDesignate($(this));
-			$currTab.stop().animate({top:'0px'},150);//,function(){$currTab.addClass('hidden')});
+			popDown(tabDesignate($(this)));
 		});
 
 	$navCat.click(function() {
@@ -47,8 +67,7 @@ $(document).ready(function(){
 										   'border-top-left-radius':0,},1000);
 			$nameBarPrimary.animate({'top':'-50px'},1000);
 			$mainBar.removeClass('absolutePos').addClass('fixedPos');
-			//$blankContent.animate({top:'-1000px'},1000,function(){$blankContent.addClass('hidden')});
-			$content.fadeIn(1000);
+			$content.fadeIn(1500);
 			$content.removeClass('hidden');
 			docked = true;
 		}
@@ -69,8 +88,7 @@ $(document).ready(function(){
 		//does not yet work
 		//$mainBar.switchClass("fullBar","absolutePos",1000);
 	});
-});// JavaScript Document
 
-$(document).ready(function(){
+	//resume accordion
 	$('#resumefull').accordion({heightStyle:"content",collapsible:true});
-});
+});// JavaScript Document

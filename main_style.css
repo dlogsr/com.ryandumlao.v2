@@ -6,11 +6,16 @@ html{
 
 body{
 	font-family: 'Muli', sans-serif;
-	font-size:1.1em;
+	font-weight:300;
+	font-size:1em;
 	color: #fff;
 	padding:0;
 	margin:0;
 	background-image: url(seamlesstexture2_1200.jpg);
+}
+
+article{
+	padding-top:120px;
 }
 
 h1{
@@ -20,6 +25,7 @@ h1{
 a:link, a:visited{
 	color:#FFF;
 	padding:2px;
+	text-decoratioN:none;
 }
 
 a:hover{
@@ -32,9 +38,10 @@ a:hover{
 section{
 	background-color:rgba(0,0,0,0.3);
 	border: 2px solid black;
-	margin: 120px auto 100px;
-	padding:10px;
+	margin: 00px auto 220px;
+	padding:10px ;
 	border-radius:25px;
+	border-top-left-radius:0px;
 	z-index:1;
 }
 
@@ -198,36 +205,40 @@ nav li{
 	text-align:center;
 }
 
-#aboutPopUpBG{
-	background: url(icons/about.png) no-repeat center top;
+.contentIcon{
+	background-color:#000;
+	position:relative;
+	float:left;
+	width:78px;
+	height:70px;
+	left:-78px;
+	padding-top:15px;
+	border-top-left-radius:25px;
+	border-bottom-left-radius:25px;
+}
+
+.popUpBG{
 	margin-top:4px;
 	width:100%;
 	height:67px;
 	z-index:4;
 }
 
-#resumePopUpBG{
+.aboutPopUpBG{
+	background: url(icons/about.png) no-repeat center top;	
+}
+
+.resumePopUpBG{
 	background: url(icons/resume.png) no-repeat center top;
-	margin-top:4px;
-	width:100%;
-	height:67px;
-	z-index:4;
 }
 
-#portfolioPopUpBG{
+.portfolioPopUpBG{
 	background: url(icons/portfolio.png) no-repeat center top;
-	margin-top:4px;
-	width:100%;
-	height:67px;
-	z-index:4;
+
 }
 
-#contactPopUpBG{
+.contactPopUpBG{
 	background: url(icons/contact.png) no-repeat center top;
-	margin-top:4px;
-	width:100%;
-	height:67px;
-	z-index:4;
 }
 
 /*page specific CSS*/
@@ -238,11 +249,16 @@ nav li{
 
 figure img{
 	float:right;
-	border: 2px solid black;
+	border: 3px solid black;
 	border-radius:15px;
+	margin-right:-20px;
+	margin-left: 20px;
 }
 
 /*resume*/
+.resumecat li{
+	list-style:none;
+}
 
 /*portfolio*/
 .webWindow{
@@ -254,6 +270,16 @@ figure img{
 	margin: auto -1px auto;
 	width:250px;
 	height:204px;
+}
+
+.webWindowSubText{
+	position:absolute;
+	top:0px;
+	text-align:center;
+	background:rgba(0,0,0,.8);
+	width:100%;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
 }
 
 #shibataFloral{
@@ -285,3 +311,4 @@ figure img{
 	text-decoration:none;
 	background-color:rgba(0,0,0,0);
 }
+
