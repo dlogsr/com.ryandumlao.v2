@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+/* Written by Ryan Dumlao */
+/* www.ryandumlao.com */
+/* July 22, 2013 */
 html{
 	overflow-x:hidden;
 	overflow-y:scroll;
@@ -83,6 +86,7 @@ section{
 	z-index:10;
 }
 
+/* navi related CSS code */
 #navBar{
 	position:relative;
 	background-color:#000;
@@ -93,8 +97,6 @@ section{
 	border-top-left-radius: 25px;
 }
 
-
-/* navi related CSS code */
 nav{
 	height:40px;
 }
@@ -124,24 +126,31 @@ nav li{
 	border-bottom-right-radius:25px;
 }
 
-/*.smooshBar#nameBar h1{
-	font-size:3em;
+#nameBar h1{
+	padding-left:30px;
+	font-size:5em;
+	text-shadow: 3px 3px 2px #000;
+	z-index:5;
 }
 
-.fullbar#nameBar h1{
-	font-size:5em;
-}*/
+#nameBar h2{
+	font-size:2.5em;
+	color:#000;
+}
 
-/*.fullBar#nameBar{
-	height:200px;
-	border-top-right-radius:0;
-}*/
+#nameBar:hover{
+	cursor:pointer;
+}
 
-/*.smooshBar#nameBar{
-	height: 150px;
-	border-bottom-right-radius: 0px;
-}*/
+#nameBarInset{
+	position:relative;
+	top:-160px;
+	left: 200px;
+	z-index:1;
+}
 
+
+/*smooshBar sets for jQuery calls*/
 .smooshBar#mainBar{
 	bottom:0;
     width:800px;
@@ -157,39 +166,10 @@ nav li{
 	border-top-right-radius:25px;
 }
 
-/*.smooshBar#mainBar .smooshBar#navBar{
-	position:fixed;
-	bottom:0px;
-	width:100%;
-	border-radius:0px;
-	height:200px;
-	padding:0;
-}*/
-
-#nameBar h1{
-	padding-left:30px;
-	font-size:5em;
-	text-shadow: 3px 3px 2px #000;
-	/*text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;*/*/
-	z-index:5;
-}
-
-#nameBar h2{
-	font-size:2.5em;
-	color:#000;
-	/*text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;*/
-/*	text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;*/
-}
-
-#nameBar:hover{
-	cursor:pointer;
-}
-
 .fullBar#nameBarPrimary{
 	position:relative;
 	top:-70px;
 }
-
 
 .smooshBar#nameBarPrimary{
 	position:relative;
@@ -197,13 +177,7 @@ nav li{
 }
 
 
-#nameBarInset{
-	position:relative;
-	top:-160px;
-	left: 200px;
-	z-index:1;
-}
-
+/*utility CSS classes*/
 .fixedPos{
 	position:fixed;
 }
@@ -232,18 +206,6 @@ nav li{
 	text-align:center;
 }
 
-.contentIcon{
-	background-color:#000;
-	position:relative;
-	float:left;
-	width:78px;
-	height:70px;
-	left:-78px;
-	padding-top:15px;
-	border-top-left-radius:25px;
-	border-bottom-left-radius:25px;
-}
-
 .popUpBG{
 	margin-top:4px;
 	width:100%;
@@ -266,6 +228,19 @@ nav li{
 
 .contactPopUpBG{
 	background: url(icons/contact.png) no-repeat center top;
+}
+
+/*icon CSS for each content article*/
+.contentIcon{
+	background-color:#000;
+	position:relative;
+	float:left;
+	width:78px;
+	height:70px;
+	left:-78px;
+	padding-top:15px;
+	border-top-left-radius:25px;
+	border-bottom-left-radius:25px;
 }
 
 /*page specific CSS*/

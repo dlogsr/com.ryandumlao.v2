@@ -1,3 +1,7 @@
+/* Written by Ryan Dumlao */
+/* www.ryandumlao.com */
+/* July 22, 2013 */
+
 var windowHeight = $(window).height();
 var currSection;
 var allSections = ['#about', '#resume', '#portfolio', '#contact'];
@@ -68,17 +72,9 @@ $(document).ready(function(){
 		if(docked == false){
 			console.log('clicked');
 			$mainBar.switchClass('fullBar','smooshBar',1000);
-			/*$mainBar.animate({'bottom':0,
-						      'width':'800px',
-							  'margin-left':'-400px'},1000);*/
-	  		//$nameBarH1.switchClass('fullBar','smooshBar',1000);
-	  		$nameBarH1.animate({'font-size':'3em'},1000);
-			$nameBarH2.fadeOut(400);
-			//$navBar.animate({'border-top-right-radius':'25px','border-top-left-radius':'25px'},100);
 			$navBar.add($nameBar).add($nameBarPrimary).switchClass('fullBar','smooshBar',1000);
-			/*$navBar.add($nameBar).animate({'height':'50px',
-										   'border-bottom-right-radius':0},1000);*/
-			//$nameBarPrimary.animate({'top':'-50px'},1000);
+			$nameBarH1.animate({'font-size':'3em'},1000);
+			$nameBarH2.fadeOut(400);
 			$mainBar.removeClass('absolutePos').addClass('fixedPos');
 			$content.fadeIn(1500);
 			$content.removeClass('hidden');
@@ -113,8 +109,6 @@ $(document).ready(function(){
 			$content.fadeOut(500);
 			docked = false;
 		}
-		//does not yet work
-		//$mainBar.switchClass("fullBar","absolutePos",1000);
 	});
 
 	//resume accordion
@@ -123,5 +117,5 @@ $(document).ready(function(){
 });// JavaScript Document
 
 $(window).resize(function() {
-	adjustContentSpacing(currSection);
+	adjustContentSpacing(currSection); // fix spacing if the window is resized
 });
