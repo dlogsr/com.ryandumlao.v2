@@ -47,13 +47,14 @@ $(document).ready(function(){
 
 	var docked = false;
 
-	/*$webWindow.hover(
+	//float down the portfolio window tabs for the webdesign examples to expose info
+	$webWindow.hover(
 		function(){
-			popUp($webWindowSubText,-50);
+			popUp($(this).children(),-90);
 		},
 		function(){
 			popDown($webWindowSubText);
-		});*/
+		});
 
 	$navCat.hover(
 		function(){
@@ -66,15 +67,18 @@ $(document).ready(function(){
 	$navCat.click(function() {
 		if(docked == false){
 			console.log('clicked');
-			$mainBar.animate({'bottom':0,
+			$mainBar.switchClass('fullBar','smooshBar',1000);
+			/*$mainBar.animate({'bottom':0,
 						      'width':'800px',
-							  'margin-left':'-400px'},1000);
+							  'margin-left':'-400px'},1000);*/
+	  		//$nameBarH1.switchClass('fullBar','smooshBar',1000);
 	  		$nameBarH1.animate({'font-size':'3em'},1000);
 			$nameBarH2.fadeOut(400);
-			$navBar.animate({'border-top-right-radius':'25px','border-top-left-radius':'25px'},100);
-			$navBar.add($nameBar).animate({'height':'50px',
-										   'border-bottom-right-radius':0},1000);
-			$nameBarPrimary.animate({'top':'-50px'},1000);
+			//$navBar.animate({'border-top-right-radius':'25px','border-top-left-radius':'25px'},100);
+			$navBar.add($nameBar).add($nameBarPrimary).switchClass('fullBar','smooshBar',1000);
+			/*$navBar.add($nameBar).animate({'height':'50px',
+										   'border-bottom-right-radius':0},1000);*/
+			//$nameBarPrimary.animate({'top':'-50px'},1000);
 			$mainBar.removeClass('absolutePos').addClass('fixedPos');
 			$content.fadeIn(1500);
 			$content.removeClass('hidden');
@@ -102,6 +106,13 @@ $(document).ready(function(){
 	});
 	
 	$nameBarPrimary.click(function(){
+		if(docked == true){
+			$mainBar.add($nameBar).add($navBar).add($nameBarPrimary).switchClass('smooshBar','fullBar',1000);
+			$nameBarH1.animate({'font-size':'5em'},1000);
+			$nameBarH2.delay(1000).fadeIn(400);
+			$content.fadeOut(500);
+			docked = false;
+		}
 		//does not yet work
 		//$mainBar.switchClass("fullBar","absolutePos",1000);
 	});

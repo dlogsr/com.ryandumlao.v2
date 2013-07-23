@@ -26,13 +26,16 @@ h1{
 a:link, a:visited{
 	color:#FFF;
 	padding:2px;
-	text-decoratioN:none;
+	text-decoration:none;
 }
 
 a:hover{
 	background-color:rgba(204, 255, 17, 0.6);
 	border-radius:5px;
 	padding:2px;
+}
+a img{
+	border:none;
 }
 
 /* section formatting CSS code */
@@ -121,40 +124,52 @@ nav li{
 	border-bottom-right-radius:25px;
 }
 
-.fullBar#navBar{
-	height:75px;
+/*.smooshBar#nameBar h1{
+	font-size:3em;
 }
 
-.fullBar#nameBar{
+.fullbar#nameBar h1{
+	font-size:5em;
+}*/
+
+/*.fullBar#nameBar{
 	height:200px;
-}
+	border-top-right-radius:0;
+}*/
 
 /*.smooshBar#nameBar{
 	height: 150px;
 	border-bottom-right-radius: 0px;
 }*/
 
-.miniMainBar{
+.smooshBar#mainBar{
 	bottom:0;
-	width:600px;
-	left:0;
-	margin-left:0;
+    width:800px;
+ 	margin-left:-400px;
 }
-/* smaller mainbar*/
 
-.smooshBar#mainBar .smooshBar#navBar{
+.smooshBar#navBar, .smooshBar#nameBar{
+	height:50px;
+	border-bottom-right-radius:0;
+}
+
+.smooshBar#navBar{
+	border-top-right-radius:25px;
+}
+
+/*.smooshBar#mainBar .smooshBar#navBar{
 	position:fixed;
 	bottom:0px;
 	width:100%;
 	border-radius:0px;
 	height:200px;
 	padding:0;
-}
+}*/
 
 #nameBar h1{
 	padding-left:30px;
 	font-size:5em;
-	text-shadow: 3px 3px 1px #000;
+	text-shadow: 3px 3px 2px #000;
 	/*text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;*/*/
 	z-index:5;
 }
@@ -166,10 +181,21 @@ nav li{
 /*	text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;*/
 }
 
-#nameBarPrimary{
+#nameBar:hover{
+	cursor:pointer;
+}
+
+.fullBar#nameBarPrimary{
 	position:relative;
 	top:-70px;
 }
+
+
+.smooshBar#nameBarPrimary{
+	position:relative;
+	top:-50px;
+}
+
 
 #nameBarInset{
 	position:relative;
@@ -262,13 +288,19 @@ figure img{
 }
 
 /*portfolio*/
+.webWindow:hover{
+	cursor:pointer;
+}
+
 .webWindow{
 	position:relative;
+	text-align:center;
+	background:rgba(0,0,0,.3);
 	display:inline-block;
 	border:3px solid black;
 	border-radius:10px;
-	padding:0;
-	margin: auto -1px auto;
+	padding:5px 0 0;
+	margin: 5px -1px auto;
 	width:250px;
 	height:204px;
 }
@@ -276,11 +308,10 @@ figure img{
 .webWindowSubText{
 	position:absolute;
 	bottom:0px;
+	top:0px;
 	text-align:center;
-	background:rgba(0,0,0,.8);
 	width:100%;
-	border-top-right-radius:5px;
-	border-top-left-radius:5px;
+border-radius: 5px;
 }
 
 #shibataFloral{
