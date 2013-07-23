@@ -3,7 +3,6 @@
 /* July 22, 2013 */
 
 var windowHeight = $(window).height();
-var currSection;
 var allSections = ['#about', '#resume', '#portfolio', '#contact'];
 
 function tabDesignate(tab){
@@ -91,7 +90,7 @@ $(document).ready(function(){
 		};
 
 		//jump to sections per navCat clicked
-		currSection = $(this).attr('id');
+		var currSection = $(this).attr('id');
 		currSection = '#'+currSection.slice(0,currSection.length-3); //remove "Tab" to get the section desired
 		console.log('clicked ' + currSection);
 		adjustContentSpacing(currSection);
@@ -117,5 +116,8 @@ $(document).ready(function(){
 });// JavaScript Document
 
 $(window).resize(function() {
-	adjustContentSpacing(currSection); // fix spacing if the window is resized
+	for (x in allSections){
+		adjustContentSpacing(allSections[x]);
+	};
+ // fix spacing if the window is resized
 });
