@@ -1,4 +1,6 @@
-//var windowHeight = $(window).height();
+var windowHeight = $(window).height();
+var currSection;
+var allSections = ['#about', '#resume', '#portfolio', '#contact'];
 
 function tabDesignate(tab){
 	var currTab = tab.attr('id');
@@ -17,7 +19,17 @@ function popDown(tab){
 	$currTab.stop().animate({top:'0px'},150);
 };
 
+function adjustContentSpacing(currSection) {
+	windowHeight = $(window).height();
+	var contentSpacing = windowHeight - $(currSection).height();
+	console.log(contentSpacing);
+	console.log(currSection);
+	$(currSection + 'Spacing').css({'height':contentSpacing,'min-height':'200px'});
+
+};
+
 $(document).ready(function(){
+
 	var $navCat = $('.navCat'),
 		$mainBar = $('#mainBar'),
 		$nameBar = $('#nameBar'),
@@ -34,11 +46,10 @@ $(document).ready(function(){
 	var $content = $('#content');
 
 	var docked = false;
-	console.log(docked);
 
 	/*$webWindow.hover(
 		function(){
-			popUp($webWindowSubText.fadeIn(100),-50);
+			popUp($webWindowSubText,-50);
 		},
 		function(){
 			popDown($webWindowSubText);
@@ -56,28 +67,34 @@ $(document).ready(function(){
 		if(docked == false){
 			console.log('clicked');
 			$mainBar.animate({'bottom':0,
-						      'width':'600px',
-							  'left':0,
-							  'margin-left':0},1000);
+						      'width':'800px',
+							  'margin-left':'-400px'},1000);
 	  		$nameBarH1.animate({'font-size':'3em'},1000);
 			$nameBarH2.fadeOut(400);
-			$navBar.animate({'border-top-right-radius':'25px'},100);
+			$navBar.animate({'border-top-right-radius':'25px','border-top-left-radius':'25px'},100);
 			$navBar.add($nameBar).animate({'height':'50px',
-										   'border-bottom-right-radius':0,
-										   'border-top-left-radius':0,},1000);
+										   'border-bottom-right-radius':0},1000);
 			$nameBarPrimary.animate({'top':'-50px'},1000);
 			$mainBar.removeClass('absolutePos').addClass('fixedPos');
 			$content.fadeIn(1500);
 			$content.removeClass('hidden');
+
+			//since we are now showing all sections, adjust the spacing between such that they don't
+			//appear more than two sections on the viewer's window
+			for (x in allSections){
+				adjustContentSpacing(allSections[x]);
+			};
+
 			docked = true;
 		}
 		else{
 		};
 
 		//jump to sections per navCat clicked
-		var currSection = $(this).attr('id');
-		currSection = '#'+currSection.slice(0,currSection.length-3);
-		console.log(currSection);
+		currSection = $(this).attr('id');
+		currSection = '#'+currSection.slice(0,currSection.length-3); //remove "Tab" to get the section desired
+		console.log('clicked ' + currSection);
+		adjustContentSpacing(currSection);
 		var offset = $(currSection).offset().top - 20;
 		$('html,body').stop().animate({scrollTop : offset},500);
 
@@ -91,4 +108,9 @@ $(document).ready(function(){
 
 	//resume accordion
 	$('#resumefull').accordion({heightStyle:"content",collapsible:true});
+
 });// JavaScript Document
+
+$(window).resize(function() {
+	adjustContentSpacing(currSection);
+});
