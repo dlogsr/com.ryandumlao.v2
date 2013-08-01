@@ -192,6 +192,7 @@ nav li{
 
 /*smooshBar sets for jQuery calls*/
 .smooshBar#mainBar{
+	position:fixed;
 	bottom:0;
     width:800px;
  	margin-left:-400px;
@@ -317,7 +318,7 @@ figure img{
 	padding:5px 0 0;
 	margin: 5px -1px auto;
 	width:250px;
-	height:204px;
+	height:199px;
 }
 
 .webWindowSubText{
