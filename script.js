@@ -53,7 +53,7 @@ $(document).ready(function(){
 	//float down the portfolio window tabs for the webdesign examples to expose info
 	$webWindow.hover(
 		function(){
-			popUp($(this).children(),-90);
+			popUp($(this).children("div"),-90);
 		},
 		function(){
 			popDown($webWindowSubText);
