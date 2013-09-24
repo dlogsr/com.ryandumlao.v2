@@ -5,6 +5,10 @@
 var windowHeight = $(window).height();
 var allSections = ['#about', '#resume', '#portfolio', '#contact'];
 
+function getWindowHeight(){
+	return $(window).height();
+}
+
 function tabDesignate(tab){
 	var currTab = tab.attr('id');
 	$currTab = $("#" + currTab.slice(0,currTab.length-3) + "PopUp");
@@ -23,7 +27,7 @@ function popDown(tab){
 };
 
 function adjustContentSpacing(currSection) {
-	windowHeight = $(window).height();
+	windowHeight = getWindowHeight();
 	var contentSpacing = windowHeight - $(currSection).height();
 	console.log(contentSpacing);
 	console.log(currSection);
@@ -70,15 +74,14 @@ $(document).ready(function(){
 	$navCat.click(function() {
 		if(docked == false){
 			console.log('clicked');
-			$mainBar.switchClass('fullBar','smooshBar',1000);
-			$navBar.add($nameBar).add($nameBarPrimary).switchClass('fullBar','smooshBar',1000);
+			$mainBar.add($navBar).add($nameBar).add($nameBarPrimary).switchClass('fullBar','smooshBar',1000);
 			$nameBarH1.animate({'font-size':'3em'},1000);
 			$nameBarH2.fadeOut(400);
 			$mainBar.removeClass('absolutePos').addClass('fixedPos');
 			$content.fadeIn(1500);
 			$content.removeClass('hidden');
 
-			//since we are now showing all sections, adjust the spacing between such that they don't
+			//since we are now showing all sections, adjust the spacing between so that they don't
 			//appear more than two sections on the viewer's window
 			for (x in allSections){
 				adjustContentSpacing(allSections[x]);
@@ -92,7 +95,6 @@ $(document).ready(function(){
 		//jump to sections per navCat clicked
 		var currSection = $(this).attr('id');
 		currSection = '#'+currSection.slice(0,currSection.length-3); //remove "Tab" to get the section desired
-		console.log('clicked ' + currSection);
 		adjustContentSpacing(currSection);
 		var offset = $(currSection).offset().top - 20;
 		$('html,body').stop().animate({scrollTop : offset},500);
@@ -113,7 +115,7 @@ $(document).ready(function(){
 	//resume accordion
 	$('#resumefull').accordion({heightStyle:"content",collapsible:true});
 
-});// JavaScript Document
+});
 
 $(window).resize(function() {
 	for (x in allSections){

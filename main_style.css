@@ -14,7 +14,7 @@ body{
 	color: #fff;
 	padding:0;
 	margin:0;
-	background-image: url(seamlesstexture2_1200.jpg);
+	background-image: url(seamlesstexture2_sm.jpg);
 }
 
 @media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
@@ -143,7 +143,7 @@ nav{
 
 nav li{
 	margin-top:0;
-	top:0;
+	/*top:0;*/
 	display:inline;
 	position:absolute;
 	padding:16px;
@@ -304,9 +304,9 @@ figure img{
 }
 
 /*portfolio*/
-.webWindow:hover{
+/*.webWindow:hover{
 	cursor:pointer;
-}
+}*/
 
 .webWindow{
 	position:relative;
@@ -327,7 +327,11 @@ figure img{
 	top:0px;
 	text-align:center;
 	width:100%;
-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#korJuice{
+	background: url(portfolio/webdesign_4.jpg);
 }
 
 #shibataFloral{
@@ -340,6 +344,13 @@ border-radius: 5px;
 
 #ucsdNSU{
 	background:url(portfolio/webdesign_3.jpg);
+}
+
+
+#webPortfolioWrapper{
+	text-align: center;
+	width: 600px;
+	margin:auto;
 }
 
 /*contact*/
