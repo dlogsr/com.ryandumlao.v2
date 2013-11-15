@@ -95,11 +95,15 @@ $(document).ready(function(){
 		//jump to sections per navCat clicked
 		var currSection = $(this).attr('id');
 		currSection = '#'+currSection.slice(0,currSection.length-3); //remove "Tab" to get the section desired
-		adjustContentSpacing(currSection);
-		var offset = $(currSection).offset().top - 20;
-		$('html,body').stop().animate({scrollTop : offset},500);
-
-
+		console.log(currSection);
+		if(currSection == '#blog'){
+			window.open("http://blog.ryandumlao.com","_blank");
+		}
+		else{
+			adjustContentSpacing(currSection);
+			var offset = $(currSection).offset().top - 20;
+			$('html,body').stop().animate({scrollTop : offset},500);
+		}
 	});
 	
 	$nameBarPrimary.click(function(){
@@ -113,7 +117,7 @@ $(document).ready(function(){
 	});
 
 	//resume accordion
-	$('#resumefull').accordion({heightStyle:"content",collapsible:true});
+	$('#resumefull').accordion({heightStyle:"content",collapsible:true,active:1});
 
 });
 

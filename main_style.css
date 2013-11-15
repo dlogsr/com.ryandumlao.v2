@@ -271,6 +271,10 @@ nav li{
 	background: url(icons/contact.png) no-repeat center top;
 }
 
+.blogPopUpBG{
+	background: url(icons/blog.png) no-repeat center top;
+}
+
 /*icon CSS for each content article*/
 .contentIcon{
 	background-color:#000;
@@ -303,10 +307,19 @@ figure img{
 	list-style:none;
 }
 
+.resumecat a{
+	color:white !important;
+}
+
 /*portfolio*/
 /*.webWindow:hover{
 	cursor:pointer;
 }*/
+
+#webInfo{
+	padding: 0 2em .5em 2em;
+	text-align:center;
+}
 
 .webWindow{
 	position:relative;
