@@ -22,7 +22,7 @@ body{
 	only screen and (min-resolution: 120dpi) {
 		
 		#about, #portfolio:not(.webWindow), #contact{
-			font-size:200%;
+			//font-size:200%;
 		}
 
 		#content, #mainBar{
@@ -34,7 +34,7 @@ body{
 		}
 
 		#resume h3{
-			font-size: 200%;
+			/* font-size: 200%; */
 		}
 
 		.navCat{

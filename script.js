@@ -117,7 +117,7 @@ $(document).ready(function(){
 	});
 
 	//resume accordion
-	$('#resumefull').accordion({heightStyle:"content",collapsible:true,active:1});
+	$('#resumefull').accordion({heightStyle:"content",collapsible:true,active:0});
 
 });
 
