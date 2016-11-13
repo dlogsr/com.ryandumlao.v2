@@ -47,7 +47,7 @@ body{
 		}
 
 		.webWindow{
-			font-size:.5em !important;
+			/* font-size:.75em !important; */
 			margin:-3px;
 		}
 
@@ -123,6 +123,7 @@ section{
 	left:50%;
 	margin-left:-400px;
 	z-index:10;
+	transition
 }
 
 /* navi related CSS code */
@@ -184,8 +185,8 @@ nav li{
 
 #nameBarInset{
 	position:relative;
-	top:-160px;
-	left: 200px;
+	top:-100px;
+	left: 600px;
 	z-index:1;
 }
 
