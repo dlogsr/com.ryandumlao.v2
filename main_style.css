@@ -301,6 +301,11 @@ figure img{
 	border-radius:15px;
 	margin-right:-20px;
 	margin-left: 20px;
+	max-width: 250px;
+}
+
+figure img.halfPic{
+	width:125px;
 }
 
 /*resume*/
@@ -342,6 +347,11 @@ figure img{
 	text-align:center;
 	width:100%;
 	border-radius: 5px;
+}
+
+.webPosts li ul li{
+	font-style:italic;
+	font-size:.9em;
 }
 
 #korJuice{
