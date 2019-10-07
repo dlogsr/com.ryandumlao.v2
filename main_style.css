@@ -185,8 +185,8 @@ nav li{
 
 #nameBarInset{
 	position:relative;
-	top:-100px;
-	left: 600px;
+	top:-125px;
+	/*left: 600px;*/
 	z-index:1;
 }
 
@@ -301,6 +301,11 @@ figure img{
 	border-radius:15px;
 	margin-right:-20px;
 	margin-left: 20px;
+	max-width: 250px;
+}
+
+figure img.halfPic{
+	width:125px;
 }
 
 /*resume*/
@@ -344,6 +349,11 @@ figure img{
 	border-radius: 5px;
 }
 
+.webPosts li ul li{
+	font-style:italic;
+	font-size:.9em;
+}
+
 #korJuice{
 	background: url(portfolio/webdesign_4.jpg);
 }
@@ -368,6 +378,9 @@ figure img{
 	background:url(portfolio/webdesign_6.jpg);
 }
 
+#nyuStern{
+	background:url(portfolio/webdesign_7.jpg);
+}
 
 #webPortfolioWrapper{
 	text-align: center;
@@ -383,9 +396,23 @@ figure img{
 	text-align:right;
 }
 
+#nameBarInset #contactButtonWrapper{
+	right:300px;
+}
+
 #contactButtonWrapper li{
 	display:inline-block;
 	padding:10px;
+}
+
+#contactButtonWrapper li.small{
+	padding:0;
+}
+
+#contactButtonWrapper li.small img{
+	width:35px;
+	/*border: 2px solid #888;*/
+    border-radius: 10px;
 }
 
 #contactButtonWrapper a:hover{
